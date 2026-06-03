@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Best Brothers Aluminium Workshop</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="logo">
+        <span class="logo-icon"><i class="fas fa-industry"></i></span>
+        <div>
+          <span class="logo-main">BEST BROTHERS</span>
+          <span class="logo-sub">Aluminium Workshop</span>
+        </div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-lines"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Premium Aluminium Fabrication</p>
+      <h1 class="hero-title">CRAFTED IN<br><span class="accent">ALUMINIUM.</span><br>BUILT TO LAST.</h1>
+      <p class="hero-desc">From kitchens to staircases — we fabricate with precision, style, and strength.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn-primary">Explore Products</a>
+        <a href="#order" class="btn-secondary">Place an Order</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="badge-circle">
+        <span>Est.</span>
+        <span class="badge-year">2010</span>
+        <span>Workshop</span>
+      </div>
+    </div>
+    <div class="scroll-hint"><span></span></div>
+  </section>
+
+  <!-- ===== CATEGORIES / PRODUCTS ===== -->
+  <section class="products" id="products">
+    <div class="section-header">
+      <p class="section-tag">What We Make</p>
+      <h2>OUR <span class="accent">PRODUCTS</span></h2>
+      <p class="section-desc">Explore our range of precision-crafted aluminium solutions</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="kitchen">Kitchen</button>
+      <button class="tab" data-filter="door">Doors</button>
+      <button class="tab" data-filter="window">Windows</button>
+      <button class="tab" data-filter="greenhouse">Greenhouse</button>
+      <button class="tab" data-filter="staircase">Staircase</button>
+      <button class="tab" data-filter="repair">Repairs</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+
+      <!-- Kitchen -->
+      <div class="product-card" data-cat="kitchen">
+        <div class="card-img-wrap">
+          <img src="images/kitchen1.jpg" alt="Modern Kitchen Fitting" onerror="this.src='https://placehold.co/600x400/1a1a2e/e8b84b?text=Modern+Kitchen'"/>
+          <span class="card-badge">Kitchen</span>
+        </div>
+        <div class="card-body">
+          <h3>Modern Full Kitchen</h3>
+          <p>Complete aluminium kitchen fittings with sleek cabinet frames, handles, and shelf systems.</p>
+          <div class="card-footer">
+            <span class="price">From BD 200</span>
+            <button class="btn-order" onclick="openOrder('Modern Full Kitchen')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="kitchen">
+        <div class="card-img-wrap">
+          <img src="images/kitchen2.jpg" alt="Kitchen Cabinet" onerror="this.src='https://placehold.co/600x400/1a1a2e/e8b84b?text=Kitchen+Cabinets'"/>
+          <span class="card-badge">Kitchen</span>
+        </div>
+        <div class="card-body">
+          <h3>Aluminium Cabinet Set</h3>
+          <p>Rustproof modular cabinets — perfect for humid kitchen environments.</p>
+          <div class="card-footer">
+            <span class="price">From BD 200</span>
+            <button class="btn-order" onclick="openOrder('Aluminium Cabinet Set')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doors -->
+      <div class="product-card" data-cat="door">
+        <div class="card-img-wrap">
+          <img src="images/door1.jpg" alt="Aluminium Door" onerror="this.src='https://placehold.co/600x400/16213e/e8b84b?text=Aluminium+Door'"/>
+          <span class="card-badge">Door</span>
+        </div>
+        <div class="card-body">
+          <h3>Sliding Aluminium Door</h3>
+          <p>Smooth sliding doors with tempered glass panels and powder-coated finish.</p>
+          <div class="card-footer">
+            <span class="price">From BD 50</span>
+            <button class="btn-order" onclick="openOrder('Sliding Aluminium Door')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="door">
+        <div class="card-img-wrap">
+          <img src="images/door2.jpg" alt="Security Door" onerror="this.src='https://placehold.co/600x400/16213e/e8b84b?text=Security+Door'"/>
+          <span class="card-badge">Door</span>
+        </div>
+        <div class="card-body">
+          <h3>Security Entry Door</h3>
+          <p>Heavy-duty aluminium security door with multi-point locking and custom sizing.</p>
+          <div class="card-footer">
+            <span class="price">From BD 50</span>
+            <button class="btn-order" onclick="openOrder('Security Entry Door')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Windows -->
+      <div class="product-card" data-cat="window">
+        <div class="card-img-wrap">
+          <img src="images/window1.jpg" alt="Casement Window" onerror="this.src='https://placehold.co/600x400/0f3460/e8b84b?text=Casement+Window'"/>
+          <span class="card-badge">Window</span>
+        </div>
+        <div class="card-body">
+          <h3>Casement Window</h3>
+          <p>Single or double casement aluminium windows with weather-seal gaskets.</p>
+          <div class="card-footer">
+            <span class="price">From BD 40</span>
+            <button class="btn-order" onclick="openOrder('Casement Window')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="window">
+        <div class="card-img-wrap">
+          <img src="images/window2.jpg" alt="Louvre Window" onerror="this.src='https://placehold.co/600x400/0f3460/e8b84b?text=Louvre+Window'"/>
+          <span class="card-badge">Window</span>
+        </div>
+        <div class="card-body">
+          <h3>Louvre Window</h3>
+          <p>Adjustable louvre blades for ventilation — ideal for tropics and warm climates.</p>
+          <div class="card-footer">
+            <span class="price">From BD 30</span>
+            <button class="btn-order" onclick="openOrder('Louvre Window')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Greenhouse -->
+      <div class="product-card" data-cat="greenhouse">
+        <div class="card-img-wrap">
+          <img src="images/greenhouse1.jpg" alt="Greenhouse" onerror="this.src='https://placehold.co/600x400/1b4332/e8b84b?text=Greenhouse+Structure'"/>
+          <span class="card-badge">Greenhouse</span>
+        </div>
+        <div class="card-body">
+          <h3>Aluminium Greenhouse</h3>
+          <p>Full aluminium frame greenhouse kits — corrosion-resistant and long-lasting.</p>
+          <div class="card-footer">
+            <span class="price">From BD 150</span>
+            <button class="btn-order" onclick="openOrder('Aluminium Greenhouse')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Staircase -->
+      <div class="product-card" data-cat="staircase">
+        <div class="card-img-wrap">
+          <img src="images/staircase1.jpg" alt="Staircase Railing" onerror="this.src='https://placehold.co/600x400/2d2d2d/e8b84b?text=Staircase+Railing'"/>
+          <span class="card-badge">Staircase</span>
+        </div>
+        <div class="card-body">
+          <h3>Glass & Aluminium Railing</h3>
+          <p>Sleek glass-panel staircase railings with brushed aluminium posts and handrails.</p>
+          <div class="card-footer">
+            <span class="price">From BD 200</span>
+            <button class="btn-order" onclick="openOrder('Glass & Aluminium Railing')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="staircase">
+        <div class="card-img-wrap">
+          <img src="images/staircase2.jpg" alt="Spiral Staircase" onerror="this.src='https://placehold.co/600x400/2d2d2d/e8b84b?text=Spiral+Staircase'"/>
+          <span class="card-badge">Staircase</span>
+        </div>
+        <div class="card-body">
+          <h3>Spiral Staircase</h3>
+          <p>Custom aluminium spiral staircases for interior and exterior applications.</p>
+          <div class="card-footer">
+            <span class="price">From BD 70</span>
+            <button class="btn-order" onclick="openOrder('Spiral Staircase')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repair -->
+      <div class="product-card" data-cat="repair">
+        <div class="card-img-wrap">
+          <img src="images/repair1.jpg" alt="Repair Service" onerror="this.src='https://placehold.co/600x400/3d1a00/e8b84b?text=Repair+Service'"/>
+          <span class="card-badge">Repair</span>
+        </div>
+        <div class="card-body">
+          <h3>Aluminium Repair Service</h3>
+          <p>Expert repair and restoration of all aluminium doors, windows, frames & fittings.</p>
+          <div class="card-footer">
+            <span class="price">From BD 50</span>
+            <button class="btn-order" onclick="openOrder('Aluminium Repair Service')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="why-us">
+    <div class="why-inner">
+      <div class="why-text">
+        <p class="section-tag">Why Choose Us</p>
+        <h2>PRECISION.<br><span class="accent">QUALITY.</span><br>SERVICE.</h2>
+        <p>At Best Brothers, every piece is measured twice and cut once. Our craftsmen combine decades of experience with modern aluminium fabrication techniques to deliver products that exceed expectations.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <i class="fas fa-medal"></i>
+          <h4>Premium Grade</h4>
+          <p>We use only high-grade aluminium alloys for maximum strength and corrosion resistance.</p>
+        </div>
+        <div class="why-card">
+          <i class="fas fa-ruler-combined"></i>
+          <h4>Custom Sizing</h4>
+          <p>Every product is cut and fabricated to your exact measurements.</p>
+        </div>
+        <div class="why-card">
+          <i class="fas fa-tools"></i>
+          <h4>Expert Craftsmen</h4>
+          <p>Our team has 15+ years of hands-on aluminium fabrication experience.</p>
+        </div>
+        <div class="why-card">
+          <i class="fas fa-shipping-fast"></i>
+          <h4>Fast Turnaround</h4>
+          <p>Quick production and on-time delivery guaranteed for all orders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ORDER SECTION ===== -->
+  <section class="order-section" id="order">
+    <div class="section-header light">
+      <p class="section-tag">Easy Ordering</p>
+      <h2>PLACE YOUR <span class="accent">ORDER</span></h2>
+      <p class="section-desc">Fill in the form below and we'll get back to you within 24 hours</p>
+    </div>
+    <div class="order-wrap">
+      <form class="order-form" id="orderForm" onsubmit="submitOrder(event)">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="clientName" placeholder="e.g. Your Name" required />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="clientPhone" placeholder="+973 XX XXX XXXX" required />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="clientEmail" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Product / Service</label>
+          <select id="productSelect" required>
+            <option value="" disabled selected>Select a product...</option>
+            <option>Modern Full Kitchen</option>
+            <option>Aluminium Cabinet Set</option>
+            <option>Sliding Aluminium Door</option>
+            <option>Security Entry Door</option>
+            <option>Casement Window</option>
+            <option>Louvre Window</option>
+            <option>Aluminium Greenhouse</option>
+            <option>Glass & Aluminium Railing</option>
+            <option>Spiral Staircase</option>
+            <option>Aluminium Repair Service</option>
+            <option>Other (describe below)</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Measurements / Details</label>
+          <textarea id="details" rows="4" placeholder="Describe your requirements, dimensions, colour preferences..."></textarea>
+        </div>
+        <div class="form-group full">
+          <button type="submit" class="btn-primary full-width">
+            <i class="fas fa-paper-plane"></i> Submit Order Request
+          </button>
+        </div>
+      </form>
+      <div class="order-success" id="orderSuccess" style="display:none;">
+        <i class="fas fa-check-circle"></i>
+        <h3>Order Received!</h3>
+        <p>Thank you! We'll contact you within 24 hours to confirm your order details.</p>
+        <button class="btn-primary" onclick="resetOrder()">Place Another Order</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <p class="section-tag">Find Us</p>
+      <h2>CONTACT <span class="accent">&amp; LOCATION</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4>East Riffa</h4>
+        <p>Shop No. 3912, Industrial Area<br>Near Lazer Service Station<br>East Riffa, Bahrain</p>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-phone-alt"></i>
+        <h4>Call Us</h4>
+        <p><a href="tel:+233241234567">+973 33513233</a></p>
+        <p><a href="tel:+233551234567">+973 34429538</a></p>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-clock"></i>
+        <h4>Working Hours</h4>
+        <p>Saturday – Thursaday: 7:00 AM – 6:00 PM</p>
+        <p>Friday: Closed</p>
+      </div>
+      <div class="contact-card instagram-card">
+        <i class="fab fa-instagram"></i>
+        <h4>Follow Our Work</h4>
+        <p>See our latest projects and designs on Instagram</p>
+        <a href="https://www.instagram.com/new_orissa_aluminium?igsh=ZzU4czV0NmdtcWRm" target="_blank" class="btn-insta">
+          <i class="fab fa-instagram"></i> @bestbrothersaluminium
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <i class="fas fa-industry"></i>
+        <div>
+          <span class="logo-main">BEST BROTHERS</span>
+          <span class="logo-sub">Aluminium Workshop</span>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2025 Best Brothers Aluminium Workshop. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="tel:+97333513233"><i class="fas fa-phone"></i></a>
+        <a href="https://www.instagram.com/new_orissa_aluminium?igsh=ZzU4czV0NmdtcWRm" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/97333513233" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== ORDER MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      <h3>Quick Order</h3>
+      <p id="modalProduct" class="modal-product-name"></p>
+      <p>Call us directly or scroll down to fill our order form.</p>
+      <div class="modal-actions">
+        <a href="tel:+233241234567" class="btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="#order" class="btn-secondary" onclick="closeModal()">Fill Order Form</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
